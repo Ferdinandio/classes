@@ -74,3 +74,36 @@
 // };
 // obj.sum();
 
+// let user = {
+// 	name: 'John'
+// };
+
+// function sayName(surname) {
+// 	console.log(this);
+// 	console.log(this.name + ' ' + surname);	
+// }
+
+// console.log(sayName.call(user, 'Wik'));
+// console.log(sayName.apply(user, ['Snow']));
+
+// //
+// function count(number) {
+// 	return this * number;
+// }
+
+// let double = count.bind(2);      //   Способ №2: Указание конкретного контекста - call, apply, bind
+// console.log(double(3));
+// console.log(double(10));
+
+// DOM !!!
+
+let btn = document.querySelector('button');
+
+btn.addEventListener('click', function() {
+	console.log(this);
+	this.style.backgroundColor = 'red';
+	function showThis() {
+		console.log(this);
+	}
+	showThis();
+});
